@@ -6,11 +6,26 @@
     */
 
     //ENTRADA
+    const Primo = parseInt(prompt("Digite um número para verificar se é primo:"));
 
 
-    //PROCESSAMENTO
+    let divisores = 0;
 
+    for (let contador = 1; contador <= Primo; contador++) {
+    if (Primo % contador === 0) {
+        divisores++;
+        }
+    }
 
     //SAÍDA
+    if (divisores === 2) {
+        document.write(`O número ${Primo} é um número primo, pois só tem dois divisores: 1 e ${Primo}.`);
+    } else {
+        document.write(`O número ${Primo} não é primo, pois tem ${divisores} divisores.`);
+    }
+
+
+
+   
 
 </script>

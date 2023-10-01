@@ -7,11 +7,18 @@
     */
 
     //ENTRADA
+    const quantidadeDeNumeros = 5;
+    let maior = 0;
 
-    
-    //PROCESSAMENTO
+  //PROCESSAMENTO
+  for (let index = 0; index < quantidadeDeNumeros; index++) {
+    const numero = parseFloat(prompt(`Informe o numero ${index + 1}ª:`));
 
-    
-    //SAÍDA
+    if (index === 0 || numero > maior) {
+      maior = numero;
+    }
+  }
 
+  //SAÍDA
+  alert(`O maior número informado é: ${maior}`)
 </script>

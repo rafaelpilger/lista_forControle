@@ -5,10 +5,18 @@
     */
 
     //ENTRADA
-
+ //ENTRADA
+ let soma = 0;
+    let Multi = [];
 
     //PROCESSAMENTO
-
+    for (let index = 1; index <= 100; index++) {
+        if (index % 3 == 0) {
+            soma += index;
+            Multi.push(index);
+        }        
+    }
+    document.write(`Os números múltiplos de três são: ${Multi.join("_ ")}_____Soma: ${soma}`)
 
     //SAÍDA
 

@@ -9,6 +9,40 @@
 
     //ENTRADA
 
+    let representantes = [];
+    let candi1 = 0;
+    let candi2 = 0;
+    let candi3 = 0;
+    const votantes = parseInt(prompt("Informe a quantidade de alunos votantes"))
+
+
+    for (candi = 1; candi < 4; candi++) {
+        const candidatos = prompt("Informe o nome do candidato " + candi).toLowerCase();
+        representantes.push(candidatos);
+    }
+
+    for (v = 0; v < votantes; v++) {
+        const voto = prompt("Informe qual candidato deseja votar, 1, 2 ou 3? " + representantes.join(", ")).toLowerCase();
+
+        voto == 1 ? candi1++
+        : voto == 2 ? candi2++
+        : voto == 3 ? candi3++
+        : alert("ERRO");
+            
+    }
+
+    let a1 = `${representantes.splice(0, 1)} teve ${candi1} votos, com uma porcentagem de ${Math.round(candi1*100/votantes)}% `
+    let a2 = `${representantes.splice(0, 1)} teve ${candi2} votos, com uma porcentagem de ${Math.round(candi2*100/votantes)}% `
+    let a3 = `${representantes.splice(0, 1)} teve ${candi3} votos, com uma porcentagem de ${Math.round(candi3*100/votantes)}% `
+
+    candi1 > candi2 && candi1 > candi3 ? a1 = a1 + `E ganhou sendo escolhido como representante. `
+    : candi2 > candi1 && candi2 > candi3 ? a2 = a2 + `E ganhou sendo escolhido como representante. `
+    : a3 = a3 + `E ganhou sendo escolhido como representante. `
+
+    document.write(a1 + a2 + a3)
+
+
+
 
     //PROCESSAMENTO
 

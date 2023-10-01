@@ -6,6 +6,23 @@
     */
 
     //ENTRADA
+    const populacaoInicial = 80000;
+    const populacaoDesejada = 200000;
+    const taxaCrescimentoAnual = 0.03; // 3%
+
+    let anos = 0;
+    let populacaoAtual = populacaoInicial;
+
+
+    while (populacaoAtual < populacaoDesejada) {
+    populacaoAtual += populacaoAtual * taxaCrescimentoAnual;
+    anos++;
+    }
+
+
+document.write(`Serão necessários ${anos} anos para que a população atinja ${populacaoDesejada} habitantes.`);
+
+    
 
     
     //PROCESSAMENTO
